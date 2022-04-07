@@ -42,8 +42,8 @@ class _LoginState extends State<Login> {
               top: height / 90,
               left: width / 10,
               child: Container(
-                height: MediaQuery.of(context).size.height * 0.4,
-                width: MediaQuery.of(context).size.height * 0.4,
+                height: MediaQuery.of(context).size.height * 0.36,
+                width: MediaQuery.of(context).size.height * 0.36,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(50),
@@ -51,18 +51,18 @@ class _LoginState extends State<Login> {
                   ),
                   image: DecorationImage(
                     fit: BoxFit.fill,
-                    image: AssetImage('assets/mlscLogo.png'),
+                    image: AssetImage('assets/applogo2.png'),
                   ),
                 ),
               )),
-          Positioned(
-            top: height / 3,
-            left: width / 10,
-            child: Text(
-              "        Microsoft Learn \n Student Ambassadors",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-            ),
-          ),
+          // Positioned(
+          //   top: height / 3,
+          //   left: width / 10,
+          //   child: Text(
+          //     "       SREC'S EVENT  \n  Management  App",
+          //     style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+          //   ),
+          // ),
           Positioned(
               top: height / 2.2,
               left: width / 4,

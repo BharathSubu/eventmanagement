@@ -2,7 +2,12 @@ import 'package:event_management/drawer/navigationdrawer.dart';
 import 'package:flutter/material.dart';
 import '../services/mycolor.dart';
 
-class MyHomePage extends StatelessWidget {
+class MyNews extends StatefulWidget {
+  @override
+  State<MyNews> createState() => _MyNewsState();
+}
+
+class _MyNewsState extends State<MyNews> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,7 +23,7 @@ class MyHomePage extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
-            title: Text("HOME"),
+            title: Text("NEWS"),
             centerTitle: true,
             backgroundColor: Colors.transparent,
           ),

@@ -2,7 +2,12 @@ import 'package:event_management/drawer/navigationdrawer.dart';
 import 'package:flutter/material.dart';
 import '../services/mycolor.dart';
 
-class MyHomePage extends StatelessWidget {
+class MyEventPage extends StatefulWidget {
+  @override
+  State<MyEventPage> createState() => _MyEventPageState();
+}
+
+class _MyEventPageState extends State<MyEventPage> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,7 +23,7 @@ class MyHomePage extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Colors.transparent,
           appBar: AppBar(
-            title: Text("HOME"),
+            title: Text("EVENTS"),
             centerTitle: true,
             backgroundColor: Colors.transparent,
           ),
