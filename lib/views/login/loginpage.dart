@@ -2,7 +2,6 @@ import 'package:bouncing_widget/bouncing_widget.dart';
 import 'package:event_management/services/mycolor.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import './googlesignin.dart';
 import 'package:provider/provider.dart';
 
@@ -55,17 +54,9 @@ class _LoginState extends State<Login> {
                   ),
                 ),
               )),
-          // Positioned(
-          //   top: height / 3,
-          //   left: width / 10,
-          //   child: Text(
-          //     "       SREC'S EVENT  \n  Management  App",
-          //     style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-          //   ),
-          // ),
           Positioned(
-              top: height / 2.2,
-              left: width / 4,
+              top: height / 2.5,
+              left: width / 4.5,
               child: Container(
                 height: MediaQuery.of(context).size.height * 0.25,
                 width: MediaQuery.of(context).size.height * 0.25,

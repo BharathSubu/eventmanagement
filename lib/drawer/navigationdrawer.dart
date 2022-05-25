@@ -45,103 +45,7 @@ class _MyNavigationDrawerState extends State<MyNavigationDrawer> {
     }
 
     return Drawer(
-      child:
-          // Material(
-          //   color: Color.fromRGBO(50, 75, 205, 1),
-          //   child: ListView(
-          //     children: <Widget>[
-          //       buildHeader(context: context),
-          //       Container(
-          //         child: Column(
-          //           children: [
-          //             buildMenuItem(
-          //               text: 'Home',
-          //               icon: Icons.home,
-          //               onClicked: () => selectedItem(context, 0),
-          //             ),
-          //             buildMenuItem(
-          //               text: 'Team',
-          //               icon: Icons.people,
-          //               onClicked: () => selectedItem(context, 1),
-          //             ),
-          //             buildMenuItem(
-          //               text: 'Events',
-          //               icon: Icons.calendar_today,
-          //               onClicked: () => selectedItem(context, 2),
-          //             ),
-          //             buildMenuItem(
-          //               text: 'Projects',
-          //               icon: Icons.analytics_rounded,
-          //               onClicked: () => selectedItem(context, 3),
-          //             ),
-          //             buildMenuItem(
-          //               text: 'Blogs',
-          //               icon: Icons.post_add,
-          //               onClicked: () => selectedItem(context, 4),
-          //             ),
-          //             buildMenuItem(
-          //               text: 'Settings',
-          //               icon: Icons.settings,
-          //               onClicked: () => selectedItem(context, 5),
-          //             ),
-          //             Container(child: outTour())
-          //           ],
-          //         ),
-          //       ),
-          //     ],
-          //   ),
-          // ),
-          //   Material(
-          //   color: Colors.cyan[400],
-          //   child: Container(
-          //     child: Stack(
-          //       children: [
-          //         Positioned(
-          //           top: 100,
-          //           child: ListView(shrinkWrap: true, children: [
-          //             buildMenuItem(
-          //               text: 'Home',
-          //               icon: Icons.home,
-          //               onClicked: () => selectedItem(context, 0),
-          //             ),
-          //             buildMenuItem(
-          //               text: 'Team',
-          //               icon: Icons.people,
-          //               onClicked: () => selectedItem(context, 1),
-          //             ),
-          //             buildMenuItem(
-          //               text: 'Events',
-          //               icon: Icons.calendar_today,
-          //               onClicked: () => selectedItem(context, 2),
-          //             ),
-          //             buildMenuItem(
-          //               text: 'Projects',
-          //               icon: Icons.analytics_rounded,
-          //               onClicked: () => selectedItem(context, 3),
-          //             ),
-          //             buildMenuItem(
-          //               text: 'Blogs',
-          //               icon: Icons.post_add,
-          //               onClicked: () => selectedItem(context, 4),
-          //             ),
-          //             buildMenuItem(
-          //               text: 'Settings',
-          //               icon: Icons.settings,
-          //               onClicked: () => selectedItem(context, 5),
-          //             ),
-          //           ]),
-          //         ),
-          //         Positioned(
-          //             top: MediaQuery.of(context).size.height * 0.07,
-          //             child: buildHeader(context: context)),
-          //         Positioned(
-          //             bottom: MediaQuery.of(context).size.height * 0.025,
-          //             child: outTour()),
-          //       ],
-          //     ),
-          //   ),
-          // )
-          Stack(children: [
+      child: Stack(children: [
         Container(
           // color: Colors.black.withOpacity(0.25),
           decoration: BoxDecoration(
@@ -188,7 +92,7 @@ class _MyNavigationDrawerState extends State<MyNavigationDrawer> {
                 onClicked: () => selectedItem(context, 3),
               ),
               buildMenuItem(
-                text: 'Chat',
+                text: 'Forum',
                 icon: Icons.chat,
                 onClicked: () => selectedItem(context, 4),
               ),
@@ -197,11 +101,11 @@ class _MyNavigationDrawerState extends State<MyNavigationDrawer> {
                 icon: Icons.settings,
                 onClicked: () => selectedItem(context, 5),
               ),
-              buildMenuItem(
-                text: 'Log Out',
-                icon: Icons.logout,
-                onClicked: logout,
-              ),
+              // buildMenuItem(
+              //   text: 'Log Out',
+              //   icon: Icons.logout,
+              //   onClicked: logout,
+              // ),
             ]),
           ),
         ),

@@ -8,9 +8,13 @@ class NewMessageWidget extends StatefulWidget {
   final String idUser;
   final String profileurl;
   final String username;
+  final String forum;
 
   NewMessageWidget(
-      {required this.idUser, required this.profileurl, required this.username});
+      {required this.idUser,
+      required this.profileurl,
+      required this.username,
+      required this.forum});
 
   @override
   _NewMessageWidgetState createState() => _NewMessageWidgetState();
@@ -25,11 +29,11 @@ class _NewMessageWidgetState extends State<NewMessageWidget> {
     if (widget.idUser.contains("srec.ac.in") ||
         widget.idUser.contains("bharathsubu2002")) {
       await FirebaseApi.uploadMessage(
-        idUser: widget.idUser,
-        username: widget.username,
-        profileurl: widget.profileurl,
-        message: message,
-      );
+          idUser: widget.idUser,
+          username: widget.username,
+          profileurl: widget.profileurl,
+          message: message,
+          forum: widget.forum);
     } else {
       Fluttertoast.showToast(
           msg: "Use College Mail",

@@ -8,14 +8,16 @@ class MessagesWidget extends StatelessWidget {
   final user = FirebaseAuth.instance.currentUser;
 
   final String idUser;
+  final String forum;
 
   MessagesWidget({
     required this.idUser,
+    required this.forum,
   });
 
   @override
   Widget build(BuildContext context) => StreamBuilder<List<Message>>(
-        stream: FirebaseApi.getMessages(idUser),
+        stream: FirebaseApi.getMessages(idUser, forum),
         builder: (context, snapshot) {
           switch (snapshot.connectionState) {
             case ConnectionState.waiting:

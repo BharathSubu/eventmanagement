@@ -6,6 +6,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class MyChats extends StatefulWidget {
+  final String forum;
+
+  MyChats(this.forum);
   @override
   State<MyChats> createState() => _MyChatsState();
 }
@@ -72,14 +75,17 @@ class _MyChatsState extends State<MyChats> {
                           topRight: Radius.circular(25),
                         ),
                       ),
-                      child: MessagesWidget(idUser: user!.email.toString()),
+                      child: MessagesWidget(
+                        idUser: user!.email.toString(),
+                        forum: widget.forum,
+                      ),
                     ),
                   ),
                   NewMessageWidget(
-                    idUser: user!.email.toString(),
-                    profileurl: user!.photoURL.toString(),
-                    username: user.displayName.toString(),
-                  )
+                      idUser: user!.email.toString(),
+                      profileurl: user!.photoURL.toString(),
+                      username: user.displayName.toString(),
+                      forum: widget.forum)
                 ],
               ),
             )));

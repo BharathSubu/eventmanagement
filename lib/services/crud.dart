@@ -11,6 +11,40 @@ class CrudMethods {
     });
   }
 
+  Future<void> updateEventResult(String postIndex, String report) async {
+    return await FirebaseFirestore.instance
+        .collection("posts")
+        .where("index", isEqualTo: postIndex)
+        .get()
+        .then((value) {
+      value.docs.forEach((element) {
+        FirebaseFirestore.instance
+            .collection("posts")
+            .doc(element.id)
+            .update({'eventresult': report}).then((value) {
+          print("Success!");
+        });
+      });
+    });
+  }
+
+  Future<void> updateEventGallery(String postIndex, var gallery) async {
+    return await FirebaseFirestore.instance
+        .collection("posts")
+        .where("index", isEqualTo: postIndex)
+        .get()
+        .then((value) {
+      value.docs.forEach((element) {
+        FirebaseFirestore.instance
+            .collection("posts")
+            .doc(element.id)
+            .update({'gallery': gallery}).then((value) {
+          print("Success!");
+        });
+      });
+    });
+  }
+
   Future<void> addProject(postData) async {
     FirebaseFirestore.instance
         .collection("projects")
@@ -65,24 +99,6 @@ class CrudMethods {
     });
   }
 
-  Future<void> updateTeam(String teamIndex, var teamData) async {
-    return await FirebaseFirestore.instance
-        .collection("team")
-        .where("index", isEqualTo: teamIndex)
-        .get()
-        .then((value) {
-      value.docs.forEach((element) {
-        FirebaseFirestore.instance
-            .collection("team")
-            .doc(element.id)
-            .update(teamData)
-            .then((value) {
-          print("Success!");
-        });
-      });
-    });
-  }
-
   getTeam() async {
     return await FirebaseFirestore.instance
         .collection("team")
@@ -107,8 +123,6 @@ class CrudMethods {
       });
     });
   }
-
-  
 
   getProjects() async {
     return await FirebaseFirestore.instance

@@ -7,8 +7,10 @@ class FirebaseApi {
       {required String idUser,
       required String profileurl,
       required String username,
-      required String message}) async {
-    final refMessages = FirebaseFirestore.instance.collection("messages");
+      required String message,
+      required String forum}) async {
+    final refMessages =
+        FirebaseFirestore.instance.collection("chats/$forum/messages");
 
     final newMessage = Message(
       idUser: idUser,
@@ -21,9 +23,9 @@ class FirebaseApi {
     await refMessages.add(newMessage.toJson());
   }
 
-  static Stream<List<Message>> getMessages(String idUser) =>
+  static Stream<List<Message>> getMessages(String idUser, String forum) =>
       FirebaseFirestore.instance
-          .collection("messages")
+          .collection("chats/$forum/messages")
           .orderBy(MessageField.createdAt, descending: true)
           .snapshots()
           .transform(Utils.transformer(Message.fromJson));
